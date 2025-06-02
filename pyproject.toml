@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "algo-patterns"
+name = "python-runner-service"
 version = "0.1.0"
 description = "API server for algorithm debugging and visualization"
 authors = ["Your Name <your.email@example.com>"]

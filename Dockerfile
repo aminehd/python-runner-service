@@ -20,8 +20,8 @@ RUN poetry install --no-root --only main
 # Copy the rest of the application
 COPY . .
 
-# Expose the port the app runs on
-EXPOSE 83
+# Expose the port the app runs on (Cloud Run expects 8080)
+EXPOSE 8080
 
 # Command to run the application
-CMD ["poetry", "run", "python", "app.py"]
+CMD ["poetry", "run", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
